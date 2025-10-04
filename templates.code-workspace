@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "D:/scrapbook backend/templates"
+		},
+		{
+			"path": "D:/scrapbook backend/static"
+		},
+		{
+			"path": "D:/scrapbook backend"
+		},
+		{
+			"path": "D:/digital-scrapbook"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Sara Portfolio"
+	}
+}

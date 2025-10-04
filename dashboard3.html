@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Analysis Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #1f3c88;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      flex: 1 1 200px;
+      min-width: 200px;
+      text-align: center;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #1f3c88;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+    @media(max-width: 768px){
+      .dashboard {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Financial Analysis Dashboard</h1>
+</header>
+
+<div class="dashboard">
+  <!-- Summary Cards -->
+  <div class="card">
+    <h3>Total Revenue</h3>
+    <p id="revenue">$120,000</p>
+  </div>
+  <div class="card">
+    <h3>Total Expenses</h3>
+    <p id="expenses">$70,000</p>
+  </div>
+  <div class="card">
+    <h3>Net Profit</h3>
+    <p id="profit">$50,000</p>
+  </div>
+  <div class="card">
+    <h3>Profit Margin</h3>
+    <p id="margin">41.6%</p>
+  </div>
+</div>
+
+<div class="dashboard">
+  <!-- Charts -->
+  <div class="card">
+    <h3>Revenue vs Expenses</h3>
+    <canvas id="revenueExpensesChart" width="400" height="200"></canvas>
+  </div>
+  <div class="card">
+    <h3>Expense Breakdown</h3>
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+  </div>
+</div>
+
+<script>
+  // Revenue vs Expenses Line Chart
+  const ctx1 = document.getElementById('revenueExpensesChart').getContext('2d');
+  const revenueExpensesChart = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      datasets: [
+        {
+          label: 'Revenue',
+          data: [20000, 22000, 25000, 27000, 30000, 35000],
+          borderColor: '#1f3c88',
+          backgroundColor: 'rgba(31, 60, 136, 0.2)',
+          tension: 0.3
+        },
+        {
+          label: 'Expenses',
+          data: [12000, 15000, 14000, 18000, 20000, 22000],
+          borderColor: '#e74c3c',
+          backgroundColor: 'rgba(231, 76, 60, 0.2)',
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        title: { display: true, text: 'Revenue vs Expenses (Monthly)' }
+      }
+    }
+  });
+
+  // Expense Breakdown Pie Chart
+  const ctx2 = document.getElementById('expenseChart').getContext('2d');
+  const expenseChart = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: ['Rent', 'Salaries', 'Utilities', 'Marketing', 'Miscellaneous'],
+      datasets: [{
+        label: 'Expenses',
+        data: [15000, 30000, 5000, 12000, 5000],
+        backgroundColor: ['#3498db', '#2ecc71', '#f1c40f', '#e67e22', '#9b59b6'],
+        borderColor: '#fff',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: { display: true, text: 'Expense Breakdown' }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

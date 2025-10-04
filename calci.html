@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Calculator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .calculator {
+      width: 320px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+
+    #result {
+      width: 100%;
+      height: 55px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      background: #f7f9fc;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      padding: 18px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: bold;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    .operator {
+      background: #ff9800;
+      color: white;
+    }
+    .clear {
+      background: #e91e63;
+      color: white;
+    }
+    .equal {
+      background: #4caf50;
+      color: white;
+      grid-column: span 2;
+    }
+    .number {
+      background: #03a9f4;
+      color: white;
+    }
+
+    .thinking {
+      display: none;
+      margin: 10px auto;
+    }
+    .thinking img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Quotes Section */
+    .quotes-box {
+      width: 280px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      font-style: italic;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .quotes-box h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Calculator -->
+    <div class="calculator">
+      <input type="text" id="result" disabled>
+      <div class="thinking" id="thinking">
+        <img src="gif.gif" alt="Loading...">
+      </div>
+      <div class="buttons">
+        <button class="clear" onclick="clearResult()">C</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+        <button class="operator" onclick="appendValue('-')">−</button>
+
+        <button class="number" onclick="appendValue('7')">7</button>
+        <button class="number" onclick="appendValue('8')">8</button>
+        <button class="number" onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+
+        <button class="number" onclick="appendValue('4')">4</button>
+        <button class="number" onclick="appendValue('5')">5</button>
+        <button class="number" onclick="appendValue('6')">6</button>
+        <button></button>
+
+        <button class="number" onclick="appendValue('1')">1</button>
+        <button class="number" onclick="appendValue('2')">2</button>
+        <button class="number" onclick="appendValue('3')">3</button>
+        <button class="equal" onclick="calculateResult()">=</button>
+
+        <button class="number" onclick="appendValue('0')">0</button>
+        <button class="number" onclick="appendValue('.')">.</button>
+      </div>
+    </div>
+
+    <!-- Quotes Section -->
+    <div class="quotes-box">
+      <h3>Math Quote</h3>
+      <p id="quote"></p>
+    </div>
+  </div>
+
+  <script>
+    // Calculator logic
+    function appendValue(value) {
+      document.getElementById("result").value += value;
+    }
+
+    function clearResult() {
+      document.getElementById("result").value = "";
+    }
+
+    function calculateResult() {
+      const resultField = document.getElementById("result");
+      const thinking = document.getElementById("thinking");
+
+      try {
+        // Show loading gif
+        thinking.style.display = "block";
+        const expression = resultField.value;
+
+        setTimeout(() => {
+          const answer = eval(expression);
+
+// Different words for answer
+const phrases = [
+  "Yeah, it is: ",
+  "I found it: ",
+  "Catch it: ",
+  "Here you go: ",
+  "Result is: "
+];
+
+// Pick random phrase
+const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+// Show phrase + answer
+resultField.value = phrase + answer;
+
+          thinking.style.display = "none";
+        }, 2000);
+
+      } catch {
+       const errors = [
+  "Oops! That’s not valid ❌",
+  "Hmm... try again 🤔",
+  "Math doesn’t like this! ⚡",
+  "Error! Check your input 🚫",
+  "That went wrong 😅"
+];
+resultField.value = errors[Math.floor(Math.random() * errors.length)];
+
+
+        thinking.style.display = "none";
+      }
+    }
+
+    // Quotes logic
+    const quotes = [
+      "Mathematics is the music of reason.",
+      "Pure mathematics is, in its way, the poetry of logical ideas.",
+      "Without mathematics, there’s nothing you can do. Everything around you is math.",
+      "The only way to learn mathematics is to do mathematics.",
+      "Life is a math equation. In order to gain the most, you have to know how to convert negatives into positives."
+    ];
+
+    document.getElementById("quote").innerText =
+      quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
+</body>
+</html>

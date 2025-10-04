@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Welcome Fade-Out Screen -->
+<div id="welcome-screen">
+  <div class="welcome-content">
+    <div class="icons">
+      <i class="fa-solid fa-code"></i>
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+    <h1>Welcome To My <span>Portfolio Website</span></h1>
+    <p><i class="fa-solid fa-globe"></i> www.saranya.dev</p>
+  </div>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6571c8c163.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+
+</head>
+<body> 
+
+<div id="welcome-screen">
+  <div class="welcome-content">
+    <div class="icons">
+      <i class="fa-solid fa-code"></i>
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+    <h1>Welcome To My <span>Portfolio Website</span></h1>
+    <p><i class="fa-solid fa-globe"></i> www.saranya.dev</p>
+  </div>
+</div>
+
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <h2 class="logo-text" data-aos="fade-down">Portfolio</h2>
+
+            <ul id="sidemenu">
+                <li><a href="#header" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">Home</a></li>
+                <li><a href="#about" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">About</a></li>
+                <li><a href="#work" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200"> My Work</a></li>
+                <li><a href="#showcase" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">Portfolio</a></li>
+                <li><a href="#contact"data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">Contact</a></li>
+
+                
+  
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                
+
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav> 
+        <div class="header-text">
+            
+            <h1 class="neon-text" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">Hi, I'm <span>Sara</span><p>from Trichy</p><p>Student</p></h1>
+            
+        </div>
+        <div class="header-image" data-aos="fade-left">
+            <video class="profile-gif" autoplay muted loop>
+  <source src="images/vedio1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+        </div>
+</div>
+    </div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1" data-aos="fade-up-right">
+                <img src="images/circle.jpg" alt="My Photo" class="profile-photo" />
+            </div>
+            
+        <div class="about-col-2" data-aos="fade-up-left">
+
+            <h1 class="sub-title" data-aos="fade-up-left">About me</h1>
+
+            <p>A motivated and dynamic Computer Science graduate with a passion for innovation and problem-solving.
+            I have successfully completed academic and real-world projects, showcasing strong technical 
+            and analytical abilities. Skilled in Python, Data Science, Machine Learning, and Data Visualization.</p>
+            
+            <div class="tab-titles" data-aos="fade-up-right">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" data-aos="fade-up-right" id="skills">
+            <ul>
+            <li><span>UI/UX</span><br>Designing Web & Mobile Interfaces</li>
+            <li><span>Excel & Power BI</span><br>Data analysis and dashboard creation</li>
+            <li><span>Python</span><br>Data science, automation & web backend development</li>
+            </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>june-2025</span><br>Internship at Layercode Technologies</li>
+                    <li><span>may-2025</span><br>Internship at InAmigos Fouddation-Graphic Design</li>
+                    <li><span>oct 2024</span><br>Attend Workshop in GCES</li>
+                </ul>
+
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2025 - Current</span><br>Final year Student at Gces</li>
+                    <li><span>2019 - 2021</span><br>Higher Studies at Dr.NNMHS</li>
+                    
+                </ul>
+
+            </div>
+       
+
+        </div>
+
+    </div>
+</div> 
+</div>
+<!----------------------------work-------------->
+<div id="work">
+    <div class="container">
+        <h1 class="sub-title" data-aos="fade-up">My Work</h1>
+        <div class="services-list"  data-aos="fade-up">
+            <div>
+                <i class="fa-solid fa-pencil-ruler"></i>
+                <h2>UI/UX Design</h2>
+                <p>I craft user-friendly web and app interfaces using Figma and Adobe XD. 
+                 My focus is on clean layout,wireframes, and enhancing user experience.</p>
+                <a href="design.html" target="_blank">See UI/UX design</a>          
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-column"></i>
+                <h2>Excel & Power BI</h2>
+                <p>I analyze data and build interactive dashboards in Excel and Power BI, 
+                   helping visualize insights clearly for business and academic use.</p>
+                <a href="javascript:void(0)" onclick="openModal()">View Dashboard</a>
+
+            </div>
+
+
+            <!-- Modal for Dashboard Projects -->
+<div id="dashboardModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Select a Project</h2>
+    <ul>
+      <li onclick="openProject('dashboard1.html')">Weather Dashboard</li>
+      <li onclick="openProject('dashboard2.html')">Job Application Tracker</li>
+      <li onclick="openProject('dashboard3.html')">Financial Analysis</li>
+      <li onclick="openProject('dashboard4.html')">Inventory Dashboard</li>
+    </ul>
+  </div>
+</div>
+
+
+
+            <div>
+                 <i class="fa-brands fa-python"></i>
+                 <h2>Python Projects</h2>
+                 <p>I develop data science and automation tools using Python.
+                    Projects include mood-based recommender and water quality
+                     prediction system.</p>
+                 <a href="calci.html" target="_blank">Explore Python Work</a> 
+                 
+            </div>
+
+        </div>           
+    </div>
+
+</div>
+<!--------------------------portfolio----------------->
+<!-- Showcase Section -->
+<div id="showcase">
+  <div class="container">
+    <h1 class="sub-title gradient-heading"  data-aos="fade-up">Portfolio Showcase</h1>
+    <p class="sub-description">Explore my Posters, Certificates,Microsoft learn and Tech Stack</p>
+
+    <div class="showcase-tabs"  data-aos="fade-up">
+      <button class="tab" onclick="switchTab(event, 'posters')">Posters</button>
+      <button class="tab" onclick="switchTab(event, 'certificates')">Certificates</button>
+       <button class="tab" onclick="switchTab(event, 'microsoftlearn')">Badges</button>
+      <button class="tab" onclick="switchTab(event, 'techstack')">Tech Stack</button>
+     
+    </div>
+
+
+    <!-- Poster Tab -->
+<div class="tab-content active" data-aos="fade-up-right" id="posters">
+  <div class="assign-list">
+    <div class="work"><img src="images/poster1.jpg" alt="Poster 1" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/poster2.jpg" data-aos="fade-up" alt="Poster 2" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/poster3.jpg" data-aos="fade-up-left" alt="Poster 3" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/poster4.jpg" alt="Poster 4" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/poster5.jpg" data-aos="fade-up" alt="Poster 5" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/poster6.jpg" data-aos="fade-up-left" alt="Poster 6" onclick="openLightbox(this.src)"></div>
+  </div>
+</div>
+
+
+   
+
+    <!-- Certificates Tab -->
+    <div class="tab-content" data-aos="fade-up" id="certificates">
+      <div class="assign-list">
+        <div class="work"><img src="images/certi-1.jpg" alt="Certi-1" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/certi-2.jpg" alt="Certi-2" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/certi-3.jpg" alt="Certi-3" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/certificate-1.jpg" alt="Certificate 1" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/certificate-2.jpg" alt="Certificate 2" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/certificate-3.jpg" alt="Certificate 3" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/cer-4.jpg" alt="Certificate 4" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/cer-5.jpg" alt="Certificate 5" onclick="openLightbox(this.src)"></div>
+        <div class="work"><img src="images/cer-6.jpg" alt="Certificate 6" onclick="openLightbox(this.src)"></div>
+
+         <div class="work extra-cert hidden"><img src="images/certificate-7.jpg" alt="Certificate 7" /></div>
+         <div class="work extra-cert hidden"><img src="images/certificate-8.jpg" alt="Certificate 8" /></div>
+         <div class="work extra-cert hidden"><img src="images/certificate-9.jpg" alt="Certificate 9" /></div>
+         <div class="work extra-cert hidden"><img src="images/certificate-13.jpg" alt="Certificate 10" /></div>
+         <div class="work extra-cert hidden"><img src="images/certificate-11.jpg" alt="Certificate 11" /></div>
+
+         <div class="work extra-cert hidden"><img src="images/certificate-12.jpg" alt="Certificate 12" /></div>
+         <div class="work extra-cert hidden"><img src="images/certificate-10.jpg" alt="Certificate 13" /></div>
+
+        <button class="see-more-btn" onclick="toggleCertificates()">See More</button>
+        
+
+      </div>
+    </div>
+
+    <div class="tab-content" data-aos="fade-up-right" id="microsoftlearn">
+  <div class="assign-list">
+    <div class="work"><img src="images/batch/bat1.jpg" alt="Poster 1" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat2.jpg"  alt="Poster 2" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat3.jpg"  alt="Poster 3" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat4.jpg" alt="Poster 4" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat5.jpg"  alt="" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat6.jpg"  alt="" onclick="openLightbox(this.src)"></div>
+   <div class="work"><img src="images/batch/bat7.jpg" alt="" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat8.jpg" alt="" onclick="openLightbox(this.src)"></div>
+    <div class="work"><img src="images/batch/bat9.jpg" alt="" onclick="openLightbox(this.src)"></div>
+   
+ 
+    </div>
+    </div>
+
+    <!-- Tech Stack Tab -->
+    <div class="tab-content" id="techstack">
+      <div class="stack-item">
+      <img src="images/html.jpg" alt="HTML" />
+      <p>HTML</p>
+    </div>
+
+      <div class="stack-item">
+  <img src="images/css.jpg" alt="HTML" />
+  <p>CSS</p>
+</div>
+
+      <div class="stack-item">
+  <img src="images/python.jpg" alt="HTML" />
+  <p>PYTHON</p>
+</div>
+
+      <div class="stack-item">
+  <img src="images/powerbi.jpg" alt="HTML" />
+  <p>POWERBI</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+</div>
+
+
+
+<!----------------------------contact-------------------!>
+ <section class="container contact" id="contact">
+            <div class="contact-container">
+                <div class="main-title"  data-aos="fade-up">
+                    <h2>Contact <span>Me</span></h2>
+                </div>
+                <div class="contact-content-con" >
+                    <div class="left-contact" data-aos="fade-up-right">
+                        <h4>Contact me here</h4>
+                        <p>
+                          Have a question or want to work together? <br>Feel free to reach out — I’d love to connect with you!
+
+
+                        </p>
+                        <div class="contact-info" data-aos="fade-up-right">
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location</span>
+                                </div>
+                                <p>
+                                    : Trichy,Tamilnadu
+                                </p>
+                            </div>
+                            <div class="contact-item" data-aos="fade-up-right">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </div>
+                                <p>
+                                    <span>:sharansara11@gmail.com</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Education</span>
+                                </div>
+                                <p>
+                                    <span>: GCE' Srirangam</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                    <span>Mobile Number</span>
+                                </div>
+                                <p>
+                                    <span>: +91 638791390</span>
+                                </p>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i class="fas fa-globe-africa"></i>
+                                    <span>Languages</span>
+                                </div>
+                                <p>
+                                    <span>:Tamil,English</span>
+                                </p>
+                            </div>
+                             <div class="submit-btn">
+                                        <a href="images/RESUME.pdf" class="main-btn">
+                                         <span class="btn-text">Download CV</span>
+                                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                                    </a>
+                             </div>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-icon">
+                                <a href="https://www.linkedin.com/in/saranya-subramanian-260795329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app/Saranya Subramanian" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://learn.microsoft.com/en-us/users/saranyas-6146/" target="_blank">
+                                    <i class="fa-brands fa-windows"></i>
+                                </a>
+                                <a href="https://github.com/Sharan1103" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-contact" data-aos="fade-up-left">
+                         <form name="submit-to-google-sheet"  data-aos="fade-up-left">
+                            <div class="input-control i-c-2" data-aos="fade-up-left">
+                                <input type="text" name="Name" required placeholder="YOUR NAME">
+                                <input type="email" name="Email" required placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="input-control" data-aos="fade-up-left">
+                                <input type="text" name="Subject"  required placeholder="ENTER SUBJECT">
+                            </div>
+                            <div class="input-control" data-aos="fade-up-left">
+                                <textarea name="Message" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                            </div>
+                              <div class="submit-btn">
+                                  <button type="submit" class="main-btn">
+                                         <span class="btn-text">Send Message</span>
+                                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                  </button>
+                            </div>
+                            
+                        </form>
+                        <div id="msg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+     <div class="copyright" data-aos="fade-up">
+        <p>&copy;Saranya. Built with passion and precision.</p>
+
+     </div>
+</div>
+
+
+<script>
+     
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right= "0";
+    }
+    function closemenu(){
+        sidemenu.style.right= "-250px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwH-t_6TyczwSgDgDfHVxOK_-oyfjkObN-hS5UsSeIM6nliyVA03BlXsupd4QDDAnw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "<span style='color: green;'>✅ Message sent successfully!</span>";
+
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    var newRow = headers.map(function(header) {
+  Logger.log(header + ': ' + e.parameter[header]); // log each input
+  return header === 'timestamp' ? new Date() : e.parameter[header];
+});
+
+  </script>
+
+
+
+
+
+<script>
+  function switchTab(event, tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+
+    event.currentTarget.classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "block";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+<script>
+  function toggleCertificates() {
+    const extraCerts = document.querySelectorAll('.extra-cert');
+    const btn = document.querySelector('.see-more-btn');
+
+    extraCerts.forEach(cert => cert.classList.toggle('hidden'));
+
+    if (btn.innerText === 'See More') {
+      btn.innerText = 'See Less';
+    } else {
+      btn.innerText = 'See More';
+    }
+  }
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Wait for the page and welcome screen to finish
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        delay: 200
+      });
+    }, 3500); // Delay matches welcome screen fade out time (3s + little buffer)
+  });
+</script>
+
+
+<script>
+  const toggleSwitch = document.getElementById('theme-switch');
+  toggleSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('light-theme');
+  });
+</script>
+
+
+
+
+<script>
+  // Open modal when "View Dashboard" is clicked
+  function openModal() {
+    document.getElementById('dashboardModal').style.display = 'block';
+  }
+
+  // Close modal
+  function closeModal() {
+    document.getElementById('dashboardModal').style.display = 'none';
+  }
+
+  // Open project page
+  function openProject(url) {
+    window.location.href = url;
+  }
+
+  // Optional: click outside modal closes it
+  window.onclick = function(event) {
+    const modal = document.getElementById('dashboardModal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,150 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI/UX Preview</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      padding: 30px;
+      color: #333;
+    }
+
+    .work-section {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .work-title {
+       font-size: 50px;
+  font-weight: bold;
+  color: #f7567c; /* Accent color */
+  text-align: left;
+  text-shadow:
+    5px 5px 0 #ffb3c1,
+    6px 6px 0 #ffc6d4,
+    7px 7px 0 #ffe2ec;
+  letter-spacing: 1px;
+    }
+
+    .preview-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .preview-block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .preview-image {
+      flex: 1;
+      max-width: 48%;
+    }
+
+    .preview-image img {
+      width: 100%;
+      border-radius: 16px;
+     box-shadow: 0 6px 20px rgba(247, 86, 124, 0.6);
+    }
+
+    .preview-text {
+      flex: 1;
+      max-width: 48%;
+      font-size: 20px;
+      font-weight: 500;
+      color: #444;
+      padding: 20px;
+    }
+
+    .prototype-link {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 14px 26px;
+      background-color: #f7567c;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .prototype-link:hover {
+      background-color: #d7446b;
+    }
+
+    @media (max-width: 768px) {
+      .preview-block {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .preview-image, .preview-text {
+        max-width: 100%;
+      }
+
+      .preview-text {
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="work-section">
+    <div class="work-title">My UI/UX Design Preview – Mad Over Meals</div>
+
+    <div class="preview-block">
+      <div class="preview-image">
+        <img src="images/uiux/img1.png" alt="Login Page" />
+      </div>
+      <div class="preview-text">🍅 **Welcome Screen** – A vibrant splash screen with fresh food vibes to greet users warmly</div>
+    </div>
+
+    <div class="preview-block">
+      <div class="preview-image">
+        <img src="images/uiux/img2.png" alt="Home Page" />
+      </div>
+      <div class="preview-text">🎨 **UI Highlights** – A stylish overview with mobile screens, tagline, and interface cards to showcase the app essence</div>
+    </div>
+
+    <div class="preview-block">
+      <div class="preview-image">
+        <img src="images/uiux/img3.png" alt="Menu Page" />
+      </div>
+      <div class="preview-text">🧭 **User Flow** – Clear Figma connections showing the journey between Welcome, Login, Signup, and Home screens</div>
+    </div>
+
+    <div class="preview-block">
+      <div class="preview-image">
+        <img src="images/uiux/img4.png" alt="Order Page" />
+      </div>
+      <div class="preview-text">📱 **Screen Lineup** – Organized mobile frames giving a quick look at all key screens in the app</div>
+    </div>
+    <br>
+    <br>
+    
+    <a>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/v0fI1He9GuTt4GY6SFAfY6/food-app?page-id=0%3A1&node-id=1-2&scaling=scale-down&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+      🔗 View Full Prototype
+    </a>
+
+    <a href="https://sharan1103.github.io/handmade-gift-ecommerce./" class="prototype-link" style="background-color:#555; margin-top: 15px;">
+  ➡️ View Web development project
+</a>
+
+<br>
+<br>    <a href="index.html" class="btn-outline">Back to Portfolio</a>
+  </div>
+
+</body>
+</html>
